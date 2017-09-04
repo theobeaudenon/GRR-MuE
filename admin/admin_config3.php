@@ -303,7 +303,9 @@ echo "\n<input type=\"text\" name=\"chemin_complet_grr\" value=\"".Settings::get
 echo "\n</td></tr>";
 echo "\n</table>";
 echo "\n<p><input type=\"hidden\" name=\"page_config\" value=\"3\" />";
-echo "\n<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo "\n<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
+echo "\n<br /></p><div id=\"fixe\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
 echo "\n</form>";
 // fin de l'affichage de la colonne de droite
 //echo "\n</td></tr></table>";

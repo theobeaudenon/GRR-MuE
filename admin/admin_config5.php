@@ -253,7 +253,9 @@ echo "\n</td></tr>";
 echo "\n</table>";
 
 
-echo "\n<div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/>\n";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo "\n<div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/>\n";
+echo "\n<div id=\"fixe\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/>\n";
 echo "<input type=\"hidden\" value=\"5\" name=\"page_config\" /></div>\n";
 echo "</form>";
 // fin de l'affichage de la colonne de droite

@@ -305,7 +305,9 @@ if (Settings::get("sso_statut") == "lcs")
 }
 // Autoriser ou non la modification par un utilisateur de ses informations personnelles (nom, prénom)
 // Par ailleurs un gestionnaire d'utilisateurs ne peut pas Autoriser ou non la modification par un utilisateur de ses informations personnelles
-if (authGetUserLevel(getUserName(),-1,'user') !=  1)
+// Ne peut se faire que si la modification est autorisée dans la définition des paramètres SSO - CD - 20170831
+//if (authGetUserLevel(getUserName(),-1,'user') !=  1)
+if (( ! sso_IsAllowedModify) and (authGetUserLevel(getUserName(),-1,'user') !=  1))
 {
 	echo "<form action=\"admin_user.php\" method=\"get\">\n";
 	echo "<table border=\"1\">\n";
@@ -331,7 +333,9 @@ if (authGetUserLevel(getUserName(),-1,'user') !=  1)
 }
 // Autoriser ou non la modification par un utilisateur de son email
 // Par ailleurs un gestionnaire d'utilisateurs ne peut pas Autoriser ou non la modification par un utilisateur de ses informations personnelles
-if (authGetUserLevel(getUserName(), -1, 'user') != 1)
+// Ne peut se faire que si la modification est autorisée dans la définition des paramètres SSO - CD - 20170831
+//if (authGetUserLevel(getUserName(), -1, 'user') != 1)
+if (( ! sso_IsAllowedModify) and (authGetUserLevel(getUserName(), -1, 'user') != 1))
 {
 	echo "<form action=\"admin_user.php\" method=\"get\">\n";
 	echo "<table border=\"1\">\n";
@@ -357,7 +361,9 @@ if (authGetUserLevel(getUserName(), -1, 'user') != 1)
 }
 // Autoriser ou non la modification par un utilisateur de son mot de passe,
 // Par ailleurs un gestionnaire d'utilisateurs ne peut pas Autoriser ou non la modification par un utilisateur de son mot de passe
-if (authGetUserLevel(getUserName(), -1, 'user') != 1)
+// Ne peut se faire que si la modification est autorisée dans la définition des paramètres SSO - CD - 20170831
+//if (authGetUserLevel(getUserName(), -1, 'user') != 1)
+if (( ! sso_IsAllowedModify) and (authGetUserLevel(getUserName(), -1, 'user') != 1))
 {
 	echo "<form action=\"admin_user.php\" method=\"get\">\n";
 	echo "<table border=\"1\">\n";

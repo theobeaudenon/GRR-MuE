@@ -95,7 +95,9 @@ if ($dbsys == "mysql")
 	echo "<p><i>".get_vocab("warning_message_backup")."</i></p>\n";
 	?>
 	<form action="admin_save_mysql.php" method="get" style="width:100%;">
-		<div style="text-align:center;">
+<!-- Modif pour ne plus centrer le bouton - CD - 20170831
+                <div style="text-align:center;"> -->
+                <div>
 			<input type="hidden" name="flag_connect" value="yes" />
 			<input class="btn btn-primary" type="submit" value=" <?php echo get_vocab("submit_backup"); ?>" style="font-variant: small-caps;" />
 		</div></form>
@@ -109,7 +111,9 @@ if ($dbsys == "mysql")
 		echo "\n<p><span class=\"avertissement\"><i>Attention! Restaurer la base vous fera perdre toutes les données qu'elle contient actuellement. De plus, tous les utilisateurs présentement connectés, ainsi que vous-mêmes, serez déconnectés. Alors, il est conseillé de créer d'abord une sauvegarde et de vous assurer que vous êtes le seul connecté.</i></span></p>\n";
 		?>
 		<form method="post" enctype="multipart/form-data" action="admin_open_mysql.php">
-			<div style="text-align:center;">
+<!-- Modif pour ne plus centrer le bouton - CD - 20170831
+                        <div style="text-align:center;"> -->
+                        <div>
 				<input type="file" name="sql_file" size="30" />
 				<br /><br />
 				<input class="btn btn-primary" type="submit" value="<?php echo get_vocab('Restaurer la sauvegarde'); ?>" style="font-variant: small-caps;" />
@@ -172,7 +176,9 @@ $value_url = Settings::getGeneral("url_disconnect");
 echo "<input class=\"form-control\" type=\"text\" name=\"url_disconnect\" size=\"40\" value =\"$value_url\"/>\n<br /><br /></p>";
 echo "\n<hr />";
 echo "\n<p><input type=\"hidden\" name=\"page_config\" value=\"4\" />";
-echo "\n<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo "\n<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
+echo "\n<br /></p><div id=\"fixe\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
 echo "\n</form>";
 // fin de l'affichage de la colonne de droite
 //echo "\n</td></tr></table>";

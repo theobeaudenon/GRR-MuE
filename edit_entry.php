@@ -1151,7 +1151,8 @@ echo '</select>',PHP_EOL,'</div>',PHP_EOL,'</td>',PHP_EOL,'</tr>',PHP_EOL;
 // *****************************************
 
 echo '<!-- ************* Ressources edition ***************** -->',PHP_EOL;
-echo "<tr><td class=\"E\"><b>".get_vocab("rooms").get_vocab("deux_points")."</b></td></tr>\n";
+//echo "<tr><td class=\"E\"><b>".get_vocab("rooms").get_vocab("deux_points")."</b></td></tr>\n";
+echo "<tr><td class=\"E\"><b>".get_vocab("rooms")."</b>".get_vocab("ctrl_click").get_vocab("deux_points")."</b></td></tr>\n";
 $sql = "SELECT id, room_name, description FROM ".TABLE_PREFIX."_room WHERE area_id=$area_id ";
 
 // On ne cherche pas ic parmi les ressources invisibles pour l'utilisateur puisque c'est fait plus haut
@@ -1177,7 +1178,8 @@ if ($res){
 		echo '<option ',$selected,' value="',$row[0],'">',$row[1],'</option>',PHP_EOL;
 	}
 }
-echo '</select>',PHP_EOL,'</div>',get_vocab("ctrl_click"),PHP_EOL;
+//echo '</select>',PHP_EOL,'</div>',get_vocab("ctrl_click"),PHP_EOL;
+echo '</select>',PHP_EOL,'</div>';
 echo '</td>',PHP_EOL,'</tr>',PHP_EOL;
 echo '<tr>',PHP_EOL,'<td>',PHP_EOL,'<div id="div_types">',PHP_EOL;
 // Ici, on insère tous ce qui concerne les types avec de l'ajax !

@@ -546,7 +546,9 @@ else
 	echo "<input type=\"hidden\" name=\"valid\" value=\"yes\" />\n";
 	if (isset($user_login))
 		echo "<input type=\"hidden\" name=\"user_login\" value=\"".$user_login."\" />\n";
-	echo "<br /><div style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" value=\"".get_vocab("save")."\" /></div>\n";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+        //echo "<br /><div style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" value=\"".get_vocab("save")."\" /></div>\n";
+        echo "<div><input class=\"btn btn-primary\" type=\"submit\" value=\"".get_vocab("save")."\" /></div>\n";
 	echo "</div></form>\n";
 	if ((isset($user_login)) && ($user_login != ''))
 	{

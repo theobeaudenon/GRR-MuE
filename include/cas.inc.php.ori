@@ -44,7 +44,7 @@ include('cas.sso');
 */
  phpCAS::client(CAS_VERSION_2_0,$serveurSSO,$serveurSSOPort,$serveurSSORacine,true);
  phpCAS::setLang(PHPCAS_LANG_FRENCH);
-phpCAS::setDebug("/tmp/cas_debug.log");
+//phpCAS::setDebug("/tmp/cas_debug.log");
 //phpCAS::setVerbose(true);
  
 #php_value memcached.sess_prefix PhpMyBibli
@@ -64,7 +64,6 @@ Gestion du single sign-out (version 1.0.0 de phpcas)
 Commentez la ligne suivante si vous avez une erreur du type
 PHP Fatal error:  Call to undefined method phpCAS::handlelogoutrequests() in /var/www/html/grr/include/cas.inc.php
 */
-file_put_contents("/tmp/cas_debug.log",print_r($_POST, true), FILE_APPEND);
 phpCAS::handleLogoutRequests(false);
 if (phpCAS::checkAuthentication()){
 	// L'utilisateur est déjà authentifié, on continue

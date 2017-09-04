@@ -144,7 +144,9 @@ if (Settings::get('send_always_mail_to_creator')=='1')
 	echo ' checked="checked" ';
 echo ' />'."\n";
 echo get_vocab("explain_automatic_mail1");
-echo "\n".'<br /><br /><div style="text-align:center;"><input class="btn btn-primary btn-xs" type="submit" name="mail1" value="'.get_vocab('save').'" /></div></div></form><hr />';
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo "\n".'<br /><br /><div style="text-align:center;"><input class="btn btn-primary btn-xs" type="submit" name="mail1" value="'.get_vocab('save').'" /></div></div></form><hr />';
+echo "\n".'<br /><br /><div><input class="btn btn-primary btn-xs" type="submit" name="mail1" value="'.get_vocab('save').'" /></div></div></form><hr />';
 echo get_vocab("explain_automatic_mail2")."<br />";
 echo $msg;
 

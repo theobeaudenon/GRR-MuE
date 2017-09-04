@@ -1,9 +1,9 @@
 <?php
 /**
  * admin_config3.php
- * Interface permettant � l'administrateur la configuration de certains param�tres g�n�raux
+ * Interface permettant à l'administrateur la configuration de certains paramètres généraux
  * Ce script fait partie de l'application GRR
- * Derni�re modification : $Date: 2010-05-07 21:26:44 $
+ * Dernière modification : $Date: 2010-05-07 21:26:44 $
  * @author    Laurent Delineau <laurent.delineau@ac-poitiers.fr>
  * @copyright Copyright 2003-2008 Laurent Delineau
  * @link      http://www.gnu.org/licenses/licenses.html
@@ -27,7 +27,7 @@
  * along with GRR; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Derni�re modification 2014-�_-25 : CD - GIP RECIA - pour GRR version 2.0.2
+ * Dernière modification 2014-08-25 : CD - GIP RECIA - pour GRR version 2.0.2
         Meilleur alignement du bouton "save"
  */
 /**
@@ -88,7 +88,7 @@ include_once "../include/admin_config_tableau.inc.php";
 echo "<form action=\"./admin_config_etablissement.php\"  method=\"get\" style=\"width: 100%;\">\n";
 
 
-# D�sactive les messages javascript (pop-up) apr�s la cr�ation/modificatio/suppression d'une r�servation
+# Désactive les messages javascript (pop-up) après la création/modificatio/suppression d'une réservation
 # 1 = Oui, 0 = Non
 echo "\n<h3>".get_vocab("javascript_info_disabled_msg")."</h3>";
 echo "\n<table cellspacing=\"5\">";
@@ -100,7 +100,7 @@ echo "\n<input type='radio' name='javascript_info_disabled' value='1' "; if (Set
 echo "\n</td></tr>";
 echo "\n</table>";
 
-# D�sactive les messages javascript d'information (pop-up) dans les menus d'administration
+# Désactive les messages javascript d'information (pop-up) dans les menus d'administration
 # 1 = Oui, 0 = Non
 echo "\n<hr /><h3>".get_vocab("javascript_info_admin_disabled_msg")."</h3>";
 echo "\n<table cellspacing=\"5\">";
@@ -113,7 +113,7 @@ echo "\n</td></tr>";
 echo "\n</table>";
 
 // Modif CD - RECIA - 2014-05-28 : 
-// alignement diff�rent du bouton save pour int�gration portail ENT
+// alignement différent du bouton save pour intégration portail ENT
 // Ancien code :
 //echo "\n<br /></p><div id=\"fixe\"  style=\"text-align:center;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
 //echo "<br /><br /></p><div id=\"fixe\" style=\"text-align:center;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
@@ -128,7 +128,9 @@ echo "<p><input type=\"hidden\" name=\"page_config\" value=\"3\" />\n";
 echo '<br />'.PHP_EOL;
 echo '<br />'.PHP_EOL;
 echo '</p>'.PHP_EOL;
-echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+echo '<div id="fixe">'.PHP_EOL;
 echo '<input class="btn btn-primary" type="submit" name="ok" value="'.get_vocab('save').'" style="font-variant: small-caps;"/>'.PHP_EOL;
 echo '</div>';
 echo '</form>';

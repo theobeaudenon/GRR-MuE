@@ -1,9 +1,9 @@
 <?php
 /**
  * admin_config5.php
- * Interface permettant � l'administrateur la configuration des param�tres pour le module Jours Cycles
+ * Interface permettant à l'administrateur la configuration des paramètres pour le module Jours Cycles
  * Ce script fait partie de l'application GRR
- * Derni�re modification : $Date: 2010-05-07 21:26:44 $
+ * Dernière modification : $Date: 2010-05-07 21:26:44 $
  * @author    Laurent Delineau <laurent.delineau@ac-poitiers.fr>
  * @copyright Copyright 2003-2008 Laurent Delineau
  * @link      http://www.gnu.org/licenses/licenses.html
@@ -27,7 +27,7 @@
  * along with GRR; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Derni�re modification 2014-�_-25 : CD - GIP RECIA - pour GRR version 2.0.2
+ * Dernière modification 2014-08-25 : CD - GIP RECIA - pour GRR version 2.0.2
         Meilleur alignement du bouton "save"
  */
 /**
@@ -53,14 +53,14 @@
 if (!Settings::load())
     die("Erreur chargement settings");
 
-// Met � jour dans la BD le champ qui d�termine si les fonctionnalit�s Jours/Cycles sont activ�es ou d�sactiv�es
+// Met à jour dans la BD le champ qui détermine si les fonctionnalités Jours/Cycles sont activées ou désactivées
 if (isset($_GET['jours_cycles'])) {
     if (!Settings::setEtab("jours_cycles_actif", $_GET['jours_cycles'])) {
         echo "Erreur lors de l'enregistrement de jours_cycles_actif ! <br />";
     }
 }
 
-// Met � jour dans la BD du champ qui d�termine si la fonctionnalit� "multisite" est activ�e ou non
+// Met à jour dans la BD du champ qui détermine si la fonctionnalité "multisite" est activée ou non
 if (isset($_GET['module_multisite'])) {
     if (!Settings::setEtab("module_multisite", $_GET['module_multisite'])) {
         echo "Erreur lors de l'enregistrement de module_multisite ! <br />";
@@ -123,9 +123,9 @@ if (Settings::getEtab("module_multisite") == "Oui") {
 echo "</select>\n</td>\n</tr>\n</table>\n";
 
 
-# La page de modification de la configuration d'une ressource utilise pour le champ "description compl�te"
+# La page de modification de la configuration d'une ressource utilise pour le champ "description complète"
 # l'application FckEditor permettant une mise en forme "wysiwyg" de la page.
-# "0" pour ne pas utiliser cette application (le r�pertoire "fckeditor" et tout ce qu'il contient n'est alors pas n�cessaire au bon fonctionnement de GRR).
+# "0" pour ne pas utiliser cette application (le répertoire "fckeditor" et tout ce qu'il contient n'est alors pas nécessaire au bon fonctionnement de GRR).
 echo "\n<hr /><h3>".get_vocab("use_fckeditor_msg")."</h3>";
 echo "\n<p>".get_vocab("use_fckeditor_explain")."</p>";
 echo "\n<table>";
@@ -138,21 +138,25 @@ echo "\n</td></tr>";
 echo "\n</table>";
 
 // Modif CD - RECIA - 2014-05-28 : 
-// alignement diff�rent du bouton save pour int�gration portail ENT
+// alignement différent du bouton save pour intégration portail ENT
 // Ancien code :
 //echo "\n<div id=\"fixe\" style=\"text-align:center;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/>\n";
 // Nouveau code :
 //echo "\n<div style=\"text-align:right;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/>\n";
 // Fin modif RECIA
 
-echo "<input type=\"hidden\" value=\"5\" name=\"page_config\" /></div>\n";
+//Modif d'affichage - CD - 20170831
+//echo "<input type=\"hidden\" value=\"5\" name=\"page_config\" /></div>\n";
+echo "<input type=\"hidden\" value=\"5\" name=\"page_config\" />\n";
 //echo "</form>";
 
 // Nouveau code Bootstrap (bouton bleu flottant)
 echo '<br />'.PHP_EOL;
 echo '<br />'.PHP_EOL;
 echo '</p>'.PHP_EOL;
-echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+echo '<div id="fixe">'.PHP_EOL;
 echo '<input class="btn btn-primary" type="submit" name="ok" value="'.get_vocab('save').'" style="font-variant: small-caps;"/>'.PHP_EOL;
 echo '</div>';
 echo '</form>';

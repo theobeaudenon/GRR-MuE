@@ -707,7 +707,9 @@ if ((!empty($room)) || (isset($area_id)))
 		
 		echo "</table>\n";
 		
-		echo "<div style=\"text-align:center;\"><br />\n";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+                //echo "<div style=\"text-align:center;\"><br />\n";
+                echo "<div><br />\n";
 		
 		echo "<input class=\"btn btn-primary\" type=\"submit\" name=\"change_room\"  value=\"".get_vocab("save")."\" />\n";
 		echo " <input class=\"btn btn-primary\" type=\"submit\" name=\"change_done\" value=\"".get_vocab("back")."\" />";
@@ -1265,7 +1267,9 @@ if ((!empty($id_area)) || (isset($add_area)))
 			echo "<tr><td>".get_vocab("max_booking")." -  ".get_vocab("all_rooms_of_area").get_vocab("deux_points");
 			echo "</td><td><input class=\"form-control\" type=\"text\" name=\"max_booking\" value=\"".$row['max_booking']."\" /></td>\n";
 			echo "</tr></table>";
-			echo "<div style=\"text-align:center;\">\n";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+                        //echo "<div style=\"text-align:center;\">\n";
+                        echo "<div>\n";
 			echo "<input class=\"btn btn-primary\" type=\"submit\" name=\"change_area\" value=\"".get_vocab("save")."\" />\n";
 			echo "<input class=\"btn btn-primary\" type=\"submit\" name=\"change_done\" value=\"".get_vocab("back")."\" />\n";
 			echo "<input class=\"btn btn-primary\" type=\"submit\" name=\"change_area_and_back\" value=\"".get_vocab("save_and_back")."\" />";

@@ -1,9 +1,9 @@
 <?php
 /**
  * admin_config_etablissement1.php
- * Interface permettant � l'administrateur la configuration de certains param�tres g�n�raux
+ * Interface permettant à l'administrateur la configuration de certains paramètres généraux
  * Ce script fait partie de l'application GRR
- * Derni�re modification : $Date: 2010-11-24 20:52:41 $
+ * Dernière modification : $Date: 2010-11-24 20:52:41 $
  * @author    Laurent Delineau <laurent.delineau@ac-poitiers.fr>
  * @copyright Copyright 2003-2008 Laurent Delineau
  * @link      http://www.gnu.org/licenses/licenses.html
@@ -27,7 +27,7 @@
  * along with GRR; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Derni�re modification 2014-�_-25 : CD - GIP RECIA - pour GRR version 2.0.2
+ * Dernière modification 2014-08-25 : CD - GIP RECIA - pour GRR version 2.0.2
 	Meilleur alignement du bouton "save"
  */
 
@@ -38,7 +38,7 @@ if (isset($_POST['message_accueil'])) {
     }
 }
 
-// Style/th�me
+// Style/thème
 if (isset($_POST['default_css'])) {
     if (!Settings::setEtab("default_css", $_POST['default_css'])) {
         echo "Erreur lors de l'enregistrement de default_css !<br />";
@@ -64,7 +64,7 @@ if (isset($_POST['area_list_format'])) {
     }
 }
 
-// site par d�faut
+// site par défaut
 if (isset($_POST['id_site'])) {
     if (!Settings::setEtab("default_site", $_POST['id_site'])) {
         echo "Erreur lors de l'enregistrement de default_site !<br />";
@@ -72,7 +72,7 @@ if (isset($_POST['id_site'])) {
     }
 }
 
-// domaine par d�faut
+// domaine par défaut
 if (isset($_POST['id_area'])) {
     if (!Settings::setEtab("default_area", $_POST['id_area'])) {
         echo "Erreur lors de l'enregistrement de default_area !<br />";
@@ -118,7 +118,7 @@ if (isset($_POST['display_short_description'])) {
     }
 }
 
-// remplissage de la description br�ve
+// remplissage de la description brève
 if (isset($_POST['remplissage_description_breve'])) {
     if (!Settings::setEtab("remplissage_description_breve", $_POST['remplissage_description_breve'])) {
         echo "Erreur lors de l'enregistrement de remplissage_description_breve !<br />";
@@ -207,7 +207,7 @@ if ($demande_confirmation == 'yes') {
 if (!Settings::load())
     die("Erreur chargement settings");
 
-// Si pas de probl�me, message de confirmation
+// Si pas de problème, message de confirmation
 if (isset($_POST['ok'])) {
 	$_SESSION['displ_msg'] = 'yes';
     if ($msg == '') $msg = get_vocab("message_records");
@@ -221,7 +221,7 @@ if ((isset($_GET['msg'])) and isset($_SESSION['displ_msg']) and ($_SESSION['disp
 else
    $msg = '';
 
-// Utilisation de la biblioth�qye prototype dans ce script
+// Utilisation de la bibliothèque prototype dans ce script
 $use_prototype = 'y';
 
 # print the page header
@@ -237,7 +237,7 @@ include_once "../include/admin_config_tableau.inc.php";
 
 
 //
-// Config g�n�rale
+// Config générale
 //****************
 //
 echo "<form enctype=\"multipart/form-data\" action=\"./admin_config_etablissement.php\" id=\"nom_formulaire\" method=\"post\" style=\"width: 100%;\">";
@@ -297,7 +297,7 @@ echo "</p>";
 
 
 //
-// D�but et fin des r�servations
+// Début et fin des réservations
 //******************************
 //
 echo "<hr /><h3>".get_vocab("title_begin_end_bookings")."</h3>\n";
@@ -329,7 +329,7 @@ genDateSelector("end_",$eday,$emonth,$eyear,"more_years") ?>
 </table>
 <?php echo "<p><i>".get_vocab("end_bookings_explain")."</i></p>";
 //
-// Configuration de l'affichage par d�faut
+// Configuration de l'affichage par défaut
 //****************************************
 //
 ?>
@@ -490,7 +490,7 @@ else
  */
 echo '<tr><td colspan="2">';
 echo '<div id="div_liste_domaines">';
-// Ici, on ins�re la liste des domaines avec de l'ajax !
+// Ici, on insère la liste des domaines avec de l'ajax !
 echo '</div></td></tr>';
 
 /**
@@ -499,7 +499,7 @@ echo '</div></td></tr>';
 echo '<tr><td colspan="2">';
 echo '<div id="div_liste_ressources">';
 echo '<input type="hidden" id="id_area" name="id_area" value="'.Settings::get("default_area").'" />';
-// Ici, on ins�re la liste des ressouces avec de l'ajax !
+// Ici, on insère la liste des ressouces avec de l'ajax !
 echo '</div></td></tr></table>';
 
 // Au chargement de la page, on remplit les listes de domaine et de ressources
@@ -538,10 +538,10 @@ while ($i < count($liste_language)) {
 echo "</select></td></tr></table>\n";
 
 #
-# Affichage du contenu des "info-bulles" des r�servations, dans les vues journ�es, semaine et mois.
+# Affichage du contenu des "info-bulles" des réservations, dans les vues journées, semaine et mois.
 # display_info_bulle = 0 : pas d'info-bulle.
-# display_info_bulle = 1 : affichage des noms et pr�noms du b�n�ficiaire de la r�servation.
-# display_info_bulle = 2 : affichage de la description compl�te de la r�servation.
+# display_info_bulle = 1 : affichage des noms et prénoms du bénéficiaire de la réservation.
+# display_info_bulle = 2 : affichage de la description complète de la réservation.
 echo "<hr /><h3>".get_vocab("display_info_bulle_msg")."</h3>\n";
 echo "<table>";
 echo "<tr><td>".get_vocab("info-bulle0")."</td><td>";
@@ -555,9 +555,9 @@ echo "<input type='radio' name='display_info_bulle' value='2' "; if (Settings::g
 echo "</td></tr>";
 echo "</table>";
 
-# Afficher la description compl�te de la r�servation dans les vues semaine et mois.
-# display_full_description=1 : la description compl�te s'affiche.
-# display_full_description=0 : la description compl�te ne s'affiche pas.
+# Afficher la description complète de la réservation dans les vues semaine et mois.
+# display_full_description=1 : la description complète s'affiche.
+# display_full_description=0 : la description complète ne s'affiche pas.
 echo "<hr /><h3>".get_vocab("display_full_description_msg")."</h3>\n";
 echo "<table>";
 echo "<tr><td>".get_vocab("display_full_description0")."</td><td>";
@@ -568,7 +568,7 @@ echo "<input type='radio' name='display_full_description' value='1' "; if (Setti
 echo "</td></tr>";
 echo "</table>";
 
-# Afficher la description courte de la r�servation dans les vues semaine et mois.
+# Afficher la description courte de la réservation dans les vues semaine et mois.
 # display_short_description=1 : la description  s'affiche.
 # display_short_description=0 : la description  ne s'affiche pas.
 echo "<hr /><h3>".get_vocab("display_short_description_msg")."</h3>\n";
@@ -582,16 +582,16 @@ echo "</td></tr>";
 echo "</table>";
 
 ###########################################################
-# Affichage des  adresses email dans la fiche de r�servation
+# Affichage des  adresses email dans la fiche de réservation
 ###########################################################
 # Qui peut voir les adresse email ?
-# display_level_email  = 0 : N'importe qui allant sur le site, meme s'il n'est pas connect�
-# display_level_email  = 1 : Il faut obligatoirement se connecter, m�me en simple visiteur.
+# display_level_email  = 0 : N'importe qui allant sur le site, meme s'il n'est pas connecté
+# display_level_email  = 1 : Il faut obligatoirement se connecter, même en simple visiteur.
 # display_level_email  = 2 : Il faut obligatoirement se connecter et avoir le statut "utilisateur"
-# display_level_email  = 3 : Il faut obligatoirement se connecter et �tre au moins gestionnaire d'une ressource
-# display_level_email  = 4 : Il faut obligatoirement se connecter et �tre au moins administrateur du domaine
-# display_level_email  = 5 : Il faut obligatoirement se connecter et �tre administrateur de site
-# display_level_email  = 6 : Il faut obligatoirement se connecter et �tre administrateur g�n�ral
+# display_level_email  = 3 : Il faut obligatoirement se connecter et être au moins gestionnaire d'une ressource
+# display_level_email  = 4 : Il faut obligatoirement se connecter et être au moins administrateur du domaine
+# display_level_email  = 5 : Il faut obligatoirement se connecter et être administrateur de site
+# display_level_email  = 6 : Il faut obligatoirement se connecter et être administrateur général
 echo "<hr /><h3>".get_vocab("display_level_email_msg1")."</h3>\n";
 echo "<p>".get_vocab("display_level_email_msg2")."</p>";
 echo "<table cellspacing=\"5\">";
@@ -636,7 +636,7 @@ echo "<input type='radio' name='remplissage_description_breve' value='2' "; if (
 echo "</td></tr>";
 echo "</table>";
 
-# Ouvrir les pages au format imprimable dans une nouvelle fen�tre du navigateur (0 pour non et 1 pour oui)
+# Ouvrir les pages au format imprimable dans une nouvelle fenêtre du navigateur (0 pour non et 1 pour oui)
 echo "<hr /><h3>".get_vocab("pview_new_windows_msg")."</h3>\n";
 echo "<table>";
 echo "<tr><td>".get_vocab("pview_new_windows0")."</td><td>";
@@ -648,15 +648,15 @@ echo "</td></tr>";
 echo "</table>";
 
 
-# Formulaire de r�servation
+# Formulaire de réservation
 echo "</p><hr /><h3>".get_vocab("formulaire_reservation")."</h3>\n";
 echo "<p>".get_vocab("longueur_liste_ressources").get_vocab("deux_points")."
 <input type=\"text\" name=\"longueur_liste_ressources_max\" value=\"".Settings::get("longueur_liste_ressources_max")."\" size=\"5\" />";
 
 /*
-# nb_year_calendar permet de fixer la plage de choix de l'ann�e dans le choix des dates de d�but et fin des r�servations
-# La plage s'�tend de ann�e_en_cours - $nb_year_calendar � ann�e_en_cours + $nb_year_calendar
-# Par exemple, si on fixe $nb_year_calendar = 5 et que l'on est en 2005, la plage de choix de l'ann�e s'�tendra de 2000 � 2010
+# nb_year_calendar permet de fixer la plage de choix de l'année dans le choix des dates de début et fin des réservations
+# La plage s'étend de année_en_cours - $nb_year_calendar à année_en_cours + $nb_year_calendar
+# Par exemple, si on fixe $nb_year_calendar = 5 et que l'on est en 2005, la plage de choix de l'année s'étendra de 2000 à 2010
 echo "<hr /><h3>".get_vocab("nb_year_calendar_msg")."</h3>\n";
 echo get_vocab("nb_year_calendar_explain").get_vocab("deux_points");
 echo "<select name=\"nb_year_calendar\" size=\"1\">\n";
@@ -671,7 +671,7 @@ echo "</select>\n";
 */
 
 // Modif CD - RECIA - 2014-05-28 : 
-// alignement diff�rent du bouton save pour int�gration portail ENT
+// alignement différent du bouton save pour intégration portail ENT
 // Ancien code :
 //echo "<br /><br /></p><div id=\"fixe\" style=\"text-align:center;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>";
 // Nouveau code :
@@ -683,7 +683,9 @@ echo "</select>\n";
 echo '<br />'.PHP_EOL;
 echo '<br />'.PHP_EOL;
 echo '</p>'.PHP_EOL;
-echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+echo '<div id="fixe">'.PHP_EOL;
 echo '<input class="btn btn-primary" type="submit" name="ok" value="'.get_vocab('save').'" style="font-variant: small-caps;"/>'.PHP_EOL;
 echo '</div>';
 echo '</form>';

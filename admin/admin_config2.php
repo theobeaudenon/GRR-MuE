@@ -358,7 +358,9 @@ echo " - ".get_vocab("all_rooms");
 echo "</td><td><input type=\"text\" name=\"UserAllRoomsMaxBooking\" value=\"".Settings::getGeneral("UserAllRoomsMaxBooking")."\" size=\"5\"/></td></tr>\n";
 echo "</table>\n";
 echo "<p><input type=\"hidden\" name=\"page_config\" value=\"2\" />\n";
-echo "<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>\n";
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo "<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>\n";
+echo "<br /></p><div id=\"fixe\"><input class=\"btn btn-primary\" type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>\n";
 echo "</form>\n";
 // fin de l'affichage de la colonne de droite
 //echo "</td></tr></table>\n";

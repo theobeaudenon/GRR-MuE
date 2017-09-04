@@ -96,8 +96,6 @@ if($mail_method =='mail'){
 	$mail->AddAddress($mail_destinataire);
 	$mail->Subject = $sujet;
 	$mail->MsgHTML($mail_corps);
-	echo $mail_corps;
-	die;
 	$mail->AddReplyTo( $email_reponse );
 	if (!$mail->Send())
 		{

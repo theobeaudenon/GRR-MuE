@@ -925,9 +925,13 @@ function begin_page($title, $page = "with_session"){
 		$a .= '<link rel="stylesheet" type="text/css" href="../include/admin_grr.css" />'.PHP_EOL;
 		$a .= '<link rel="stylesheet" type="text/css" href="../themes/default/css/select2.css" />'.PHP_EOL;
 		$a .= '<link rel="stylesheet" type="text/css" href="../themes/default/css/select2-bootstrap.css" />'.PHP_EOL;
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
+//Passage en https de l'acces aux polices google - Cd - 20170831
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
 		if ((isset($_GET['pview'])) && ($_GET['pview'] == 1))
 			$a .= '<link rel="stylesheet" type="text/css" href="../themes/print/css/style.css" />'.PHP_EOL;
 		$a .= '<link rel="stylesheet" type="text/css" href="../themes/default/css/jquery-ui.css" />'.PHP_EOL;
@@ -943,7 +947,9 @@ function begin_page($title, $page = "with_session"){
 		$a .= '<script type="text/javascript" src="../js/bootstrap-multiselect.js"></script>'.PHP_EOL;
 		$a .= '<script type="text/javascript" src="../js/html2canvas.js"></script>'.PHP_EOL;
 		$a .= '<script type="text/javascript" src="../js/menu.js"></script>'.PHP_EOL;
-		$a .= '<script type="text/javascript" src="../js/jquery.cookie.min.js"></script>'.PHP_EOL;
+// La librairie minimisée n'existe pas ! => non minimisée - CD - 20170831
+		//$a .= '<script type="text/javascript" src="../js/jquery.cookie.min.js"></script>'.PHP_EOL;
+		$a .= '<script type="text/javascript" src="../js/jquery.cookie.js"></script>'.PHP_EOL;
 		$a .= '<script type="text/javascript" src="../js/jspdf.min.js"></script>'.PHP_EOL;
 		$a .= '<script type="text/javascript" src="../js/pdf.js" ></script>'.PHP_EOL;
 		$a .= '<script type="text/javascript" src="../js/popup.js" charset="utf-8"></script>'.PHP_EOL;
@@ -981,9 +987,13 @@ function begin_page($title, $page = "with_session"){
 			$a .= '<link rel="stylesheet" type="text/css" href="themes/default/css/bootstrap-multiselect.css">'.PHP_EOL;
 			$a .= '<link rel="stylesheet" type="text/css" href="themes/default/css/bootstrap-clockpicker.min.css">'.PHP_EOL;
 		}
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
-		$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
+//Passage en https de l'acces aux polices google - Cd - 20170831
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
+		//$a .= '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed" >'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >'.PHP_EOL;
+		$a .= '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">'.PHP_EOL;
 		if ((isset($_GET['pview'])) && ($_GET['pview'] == 1))
 			$a .= '<link rel="stylesheet" type="text/css" href="themes/print/css/style.css" />'.PHP_EOL;
 		$a .= '<link rel="stylesheet" type="text/css" href="themes/default/css/jquery-ui.css" />'.PHP_EOL;

@@ -1377,7 +1377,9 @@ echo "</select>\n";
 echo '<br />'.PHP_EOL;
 echo '<br />'.PHP_EOL;
 echo '</p>'.PHP_EOL;
-echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+echo '<div id="fixe">'.PHP_EOL;
 echo '<input class="btn btn-primary" type="submit" name="ok" value="'.get_vocab('save').'" style="font-variant: small-caps;"/>'.PHP_EOL;
 echo '</div>';
 echo '</form>';

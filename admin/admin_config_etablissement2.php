@@ -1,9 +1,9 @@
 <?php
 /**
  * admin_config2.php
- * Interface permettant � l'administrateur la configuration de certains param�tres g�n�raux
+ * Interface permettant à l'administrateur la configuration de certains paramètres généraux
  * Ce script fait partie de l'application GRR
- * Derni�re modification : $Date: 2011-01-11 09:37:50 $
+ * Dernière modification : $Date: 2011-01-11 09:37:50 $
  * @author    Laurent Delineau <laurent.delineau@ac-poitiers.fr>
  * @copyright Copyright 2003-2008 Laurent Delineau
  * @link      http://www.gnu.org/licenses/licenses.html
@@ -27,7 +27,7 @@
  * along with GRR; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Derni�re modification 2014-�_-25 : CD - GIP RECIA - pour GRR version 2.0.2
+ * Dernière modification 2014-08-25 : CD - GIP RECIA - pour GRR version 2.0.2
         Meilleur alignement du bouton "save"
  */
 /**
@@ -59,7 +59,7 @@
  *
  */
 
-// Nombre maximum de r�servation (tous domaines confondus)
+// Nombre maximum de réservation (tous domaines confondus)
 if (isset($_GET['UserAllRoomsMaxBooking'])) {
     settype($_GET['UserAllRoomsMaxBooking'],"integer");
     if ($_GET['UserAllRoomsMaxBooking']=='') $_GET['UserAllRoomsMaxBooking'] = -1;
@@ -78,7 +78,7 @@ if (isset($_GET['visu_fiche_description'])) {
     }
 }
 
-// Acc�s fiche de r�servation d'une ressource.
+// Accès fiche de réservation d'une ressource.
 if (isset($_GET['acces_fiche_reservation'])) {
     if (!Settings::setEtab("acces_fiche_reservation", $_GET['acces_fiche_reservation'])) {
         echo "Erreur lors de l'enregistrement de acces_fiche_reservation !<br />";
@@ -125,13 +125,13 @@ echo "<form action=\"./admin_config_etablissement.php\" method=\"get\" style=\"w
 ###########################################################
 # Visualisation de la fiche de description d'une ressource.
 ###########################################################
-# visu_fiche_description  = 0 : N'importe qui allant sur le site peut afficher la fiche de description d'une ressource, meme s'il n'est pas connect�
-# visu_fiche_description  = 1 : Il faut obligatoirement se connecter pour voir la fiche de description d'une ressource, m�me en simple visiteur.
+# visu_fiche_description  = 0 : N'importe qui allant sur le site peut afficher la fiche de description d'une ressource, meme s'il n'est pas connecté
+# visu_fiche_description  = 1 : Il faut obligatoirement se connecter pour voir la fiche de description d'une ressource, même en simple visiteur.
 # visu_fiche_description  = 2 : Il faut obligatoirement se connecter et avoir le statut "utilisateur" pour voir la fiche de description d'une ressource
-# visu_fiche_description  = 3 : Il faut obligatoirement se connecter et �tre au moins gestionnaire d'une ressource pour voir la fiche de description d'une ressource
-# visu_fiche_description  = 4 : Il faut obligatoirement se connecter et �tre au moins administrateur du domaine pour voir la fiche de description d'une ressource du domaine.
-# visu_fiche_description  = 5 : Il faut obligatoirement se connecter et �tre administrateur de site pour voir la fiche de description d'une ressource.
-# visu_fiche_description  = 6 : Il faut obligatoirement se connecter et �tre administrateur g�n�ral pour voir la fiche de description d'une ressource.
+# visu_fiche_description  = 3 : Il faut obligatoirement se connecter et être au moins gestionnaire d'une ressource pour voir la fiche de description d'une ressource
+# visu_fiche_description  = 4 : Il faut obligatoirement se connecter et être au moins administrateur du domaine pour voir la fiche de description d'une ressource du domaine.
+# visu_fiche_description  = 5 : Il faut obligatoirement se connecter et être administrateur de site pour voir la fiche de description d'une ressource.
+# visu_fiche_description  = 6 : Il faut obligatoirement se connecter et être administrateur général pour voir la fiche de description d'une ressource.
 echo "<h3>".get_vocab("visu_fiche_description_msg")."</h3>\n";
 echo "<table cellspacing=\"5\">\n";
 echo "<tr><td>".get_vocab("visu_fiche_description0")."</td><td>\n";
@@ -160,15 +160,15 @@ echo "</td></tr>\n";
 echo "</table>\n";
 
 ###########################################################
-# Visualisation de la fiche de r�servatiob d'une ressource.
+# Visualisation de la fiche de réservatiob d'une ressource.
 ###########################################################
-# acces_fiche_reservation  = 0 : N'importe qui allant sur le site, meme s'il n'est pas connect�
-# acces_fiche_reservation  = 1 : Il faut obligatoirement se connecter, m�me en simple visiteur.
+# acces_fiche_reservation  = 0 : N'importe qui allant sur le site, meme s'il n'est pas connecté
+# acces_fiche_reservation  = 1 : Il faut obligatoirement se connecter, même en simple visiteur.
 # acces_fiche_reservation  = 2 : Il faut obligatoirement se connecter et avoir le statut "utilisateur"
-# acces_fiche_reservation  = 3 : Il faut obligatoirement se connecter et �tre au moins gestionnaire d'une ressource
-# acces_fiche_reservation  = 4 : Il faut obligatoirement se connecter et �tre au moins administrateur du domaine
-# acces_fiche_reservation  = 5 : Il faut obligatoirement se connecter et �tre administrateur de site
-# acces_fiche_reservation  = 6 : Il faut obligatoirement se connecter et �tre administrateur g�n�ral
+# acces_fiche_reservation  = 3 : Il faut obligatoirement se connecter et être au moins gestionnaire d'une ressource
+# acces_fiche_reservation  = 4 : Il faut obligatoirement se connecter et être au moins administrateur du domaine
+# acces_fiche_reservation  = 5 : Il faut obligatoirement se connecter et être administrateur de site
+# acces_fiche_reservation  = 6 : Il faut obligatoirement se connecter et être administrateur général
 echo "<hr /><h3>".get_vocab("acces_fiche_reservation_msg")."</h3>\n";
 echo "<table cellspacing=\"5\">\n";
 echo "<tr><td>".get_vocab("visu_fiche_description0")."</td><td>\n";
@@ -199,10 +199,10 @@ echo "</table>\n";
 //Nombre max de de r�servations, toutes ressources confondues
 
 
-//Suppression/Modification de r�servations
-# allow_user_delete_after_begin = 0 : un utilisateur ne peut pas supprimer ou modifier une r�servation en cours ni cr�er une r�servation sur un cr�neau "entam�".
-# allow_user_delete_after_begin = 1 : un utilisateur peut supprimer, modifier ou cr�er dans certaines conditions une r�servation en cours (et dont il est b�n�ficiaire) et cr�er une r�servation sur un cr�neau "entam�".
-# allow_user_delete_after_begin = 2 : un utilisateur peut modifier dans certaines conditions une r�servation en cours (et dont il est b�n�ficiaire) et cr�er une r�servation sur un cr�neau "entam�" (mais pas supprimer ni cr�er) .
+//Suppression/Modification de réservations
+# allow_user_delete_after_begin = 0 : un utilisateur ne peut pas supprimer ou modifier une réservation en cours ni créer une réservation sur un créneau "entamé".
+# allow_user_delete_after_begin = 1 : un utilisateur peut supprimer, modifier ou créer dans certaines conditions une réservation en cours (et dont il est bénéficiaire) et créer une réservation sur un créneau "entamé".
+# allow_user_delete_after_begin = 2 : un utilisateur peut modifier dans certaines conditions une réservation en cours (et dont il est bénéficiaire) et créer une r�servation sur un créneau "entamé" (mais pas supprimer ni créer) .
 echo "<hr /><h3>".get_vocab("allow_user_delete_after_beginning_msg")."</h3>\n";
 echo "<table cellspacing=\"5\">\n";
 echo "<tr><td>".get_vocab("allow_user_delete_after_beginning0")."</td><td>\n";
@@ -216,8 +216,8 @@ echo "<input type='radio' name='allow_user_delete_after_begin' value='2' "; if (
 echo "</td></tr>\n";
 echo "</table>\n";
 
-# allow_gestionnaire_modify_delete=0 : un gestionnaire d'une ressource ne peut pas supprimer ou modifier les r�servation effectu�es sur la ressource, sauf celles dont il est l'auteur.
-# allow_gestionnaire_modify_delete=1 : un gestionnaire d'une ressource peut supprimer ou modifier n'importe quelle r�servation effectu�es sur la ressource
+# allow_gestionnaire_modify_delete=0 : un gestionnaire d'une ressource ne peut pas supprimer ou modifier les réservation effectuées sur la ressource, sauf celles dont il est l'auteur.
+# allow_gestionnaire_modify_delete=1 : un gestionnaire d'une ressource peut supprimer ou modifier n'importe quelle réservation effectuées sur la ressource
 echo "<hr />\n";
 echo "<table cellspacing=\"5\">\n";
 echo "<tr><td>".get_vocab("allow_gestionnaire_modify_del0")."</td><td>\n";
@@ -228,7 +228,7 @@ echo "<input type='radio' name='allow_gestionnaire_modify_del' value='1' "; if (
 echo "</td></tr>\n";
 echo "</table>\n";
 
-// Nombre max de r�servations (toutes ressources)
+// Nombre max de réservations (toutes ressources)
 echo "<hr />\n";
 echo "<table cellspacing=\"5\">\n";
 echo "<tr><td>".get_vocab("max_booking")." ";
@@ -239,7 +239,7 @@ echo "</table>\n";
 
 echo "<p><input type=\"hidden\" name=\"page_config\" value=\"2\" />\n";
 // Modif CD - RECIA - 2014-05-28 : 
-// alignement diff�rent du bouton save pour int�gration portail ENT
+// alignement différent du bouton save pour intégration portail ENT
 // Ancien code :
 //echo "<br /></p><div id=\"fixe\" style=\"text-align:center;\"><input type=\"submit\" name=\"ok\" value=\"".get_vocab("save")."\" style=\"font-variant: small-caps;\"/></div>\n";
 // Nouveau code :
@@ -251,7 +251,9 @@ echo "<p><input type=\"hidden\" name=\"page_config\" value=\"2\" />\n";
 echo '<br />'.PHP_EOL;
 echo '<br />'.PHP_EOL;
 echo '</p>'.PHP_EOL;
-echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+//Modif pour ne plus centrer le bouton - CD - 20170831
+//echo '<div id="fixe" style="text-align:center;">'.PHP_EOL;
+echo '<div id="fixe">'.PHP_EOL;
 echo '<input class="btn btn-primary" type="submit" name="ok" value="'.get_vocab('save').'" style="font-variant: small-caps;"/>'.PHP_EOL;
 echo '</div>';
 echo '</form>';
